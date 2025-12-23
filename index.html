@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danials - Indisk mat & Pizza i Malmö</title>
+    <meta name="description" content="Danials Indian Kitchen & Pizza - Autentisk indisk mat och läcker pizza i Malmö. Beställ online för avhämtning eller leverans.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <span class="logo-text">Danials</span>
+                    <span class="logo-subtitle">Indian Kitchen & Pizza</span>
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Hem</a></li>
+                        <li><a href="#about" class="nav-link">Om oss</a></li>
+                        <li><a href="#menu" class="nav-link">Meny</a></li>
+                        <li><a href="#hours" class="nav-link">Öppettider</a></li>
+                        <li><a href="#contact" class="nav-link">Hitta till oss</a></li>
+                    </ul>
+                    <a href="#order" class="btn btn-primary btn-order">
+                        <i class="fas fa-shopping-bag"></i>
+                        Beställ Online
+                    </a>
+                </div>
+                
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title animate-fade-in">
+                        Välkommen till <span class="highlight">Danials</span>
+                    </h1>
+                    <p class="hero-subtitle animate-fade-in-delay">
+                        Upplev äkta indiska smaker och traditionell pizza i hjärtat av Malmö
+                    </p>
+                    <div class="hero-buttons animate-fade-in-delay-2">
+                        <a href="#menu" class="btn btn-primary btn-lg">
+                            <i class="fas fa-book-open"></i>
+                            Se vår meny
+                        </a>
+                        <a href="#order" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-utensils"></i>
+                            Beställ nu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Om Danials</h2>
+                <p class="section-subtitle">En smakresa mellan Indien och Italien</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Autentiska Smaker</h3>
+                    <p>Vi använder traditionella recept och färska ingredienser för att skapa äkta indiska rätter som tar dig på en kulinarisk resa.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3>Klassisk Pizza</h3>
+                    <p>Våra pizzor bakas med kärlek enligt italiensk tradition med hemlagad deg och förstklassiga ingredienser.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Gjort med Passion</h3>
+                    <p>Varje rätt tillagas med omsorg och passion för att ge dig den bästa smakupplevelsen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="menu-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vår Meny</h2>
+                <p class="section-subtitle">Upptäck våra specialiteter</p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="indian">Indiska Rätter</button>
+                <button class="menu-tab" data-category="pizza">Pizza</button>
+                <button class="menu-tab" data-category="vegetarian">Vegetariskt</button>
+                <button class="menu-tab" data-category="drinks">Drycker</button>
+            </div>
+            
+            <div class="menu-grid" id="menuGrid">
+                <!-- Indian Category -->
+                <div class="menu-item" data-category="indian">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%);">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                        <span class="menu-badge">Populär</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chicken Tikka Masala</h3>
+                        <p>Saftig kyckling i en krämig tomatsås med aromatiska kryddor</p>
+                        <div class="menu-item-footer">
+                            <span class="price">145 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="indian">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFA94D 0%, #FF6B6B 100%);">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Butter Chicken</h3>
+                        <p>Klassisk indisk favorit med smörig tomatsås och grillad kyckling</p>
+                        <div class="menu-item-footer">
+                            <span class="price">149 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="indian">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #51CF66 0%, #2F9E44 100%);">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <span class="menu-badge spicy">Stark</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Lamb Vindaloo</h3>
+                        <p>Kryddstark lammrätt från Goa med potatis och vinäger</p>
+                        <div class="menu-item-footer">
+                            <span class="price">165 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza Category -->
+                <div class="menu-item" data-category="pizza" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFD43B 0%, #FF922B 100%);">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <span class="menu-badge">Populär</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Margherita</h3>
+                        <p>Klassisk italiensk pizza med färsk mozzarella och basilika</p>
+                        <div class="menu-item-footer">
+                            <span class="price">95 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="pizza" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF8787 0%, #FA5252 100%);">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Pepperoni Special</h3>
+                        <p>Generöst med pepperoni, mozzarella och vår speciella tomatsås</p>
+                        <div class="menu-item-footer">
+                            <span class="price">115 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="pizza" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #94D82D 0%, #74B816 100%);">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Quattro Stagioni</h3>
+                        <p>Fyra årstider på en pizza - skinka, champinjoner, oliver och kronärtskocka</p>
+                        <div class="menu-item-footer">
+                            <span class="price">125 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vegetarian Category -->
+                <div class="menu-item" data-category="vegetarian" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #8CE99A 0%, #51CF66 100%);">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <span class="menu-badge veg">Vegansk</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Palak Paneer</h3>
+                        <p>Indisk färskost i krämig spenat med indiska kryddor</p>
+                        <div class="menu-item-footer">
+                            <span class="price">129 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="vegetarian" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFD43B 0%, #FFA94D 100%);">
+                            <i class="fas fa-carrot"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Dal Makhani</h3>
+                        <p>Svarta linser tillagade i smör och grädde över långsam eld</p>
+                        <div class="menu-item-footer">
+                            <span class="price">119 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="vegetarian" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFD43B 0%, #FF922B 100%);">
+                            <i class="fas fa-cheese"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Vegetariana Pizza</h3>
+                        <p>Färska grönsaker, oliver, paprika och mozzarella</p>
+                        <div class="menu-item-footer">
+                            <span class="price">105 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drinks Category -->
+                <div class="menu-item" data-category="drinks" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFD43B 0%, #FF922B 100%);">
+                            <i class="fas fa-glass-whiskey"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mango Lassi</h3>
+                        <p>Traditionell indisk dryck med mango och yoghurt</p>
+                        <div class="menu-item-footer">
+                            <span class="price">45 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFA94D 0%, #FF6B6B 100%);">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Masala Chai</h3>
+                        <p>Kryddat te med kardemumma, kanel och ingefära</p>
+                        <div class="menu-item-footer">
+                            <span class="price">35 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks" style="display: none;">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #74C0FC 0%, #4C6EF5 100%);">
+                            <i class="fas fa-bottle-water"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Läskedrycker</h3>
+                        <p>Coca-Cola, Fanta, Sprite (33cl)</p>
+                        <div class="menu-item-footer">
+                            <span class="price">25 kr</span>
+                            <button class="btn btn-sm btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-cta">
+                <a href="#order" class="btn btn-primary btn-lg">
+                    Se hela menyn & Beställ
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours Section -->
+    <section id="hours" class="hours">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Öppettider</h2>
+                <p class="section-subtitle">Vi välkomnar dig varje dag</p>
+            </div>
+            
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <div class="hours-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Veckans öppettider</h3>
+                    <div class="hours-list">
+                        <div class="hours-row">
+                            <span class="day">Måndag - Torsdag</span>
+                            <span class="time">11:00 - 22:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Fredag - Lördag</span>
+                            <span class="time">11:00 - 23:00</span>
+                        </div>
+                        <div class="hours-row highlight">
+                            <span class="day">Söndag</span>
+                            <span class="time">12:00 - 22:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hours-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Ring oss</h4>
+                            <p><a href="tel:+46406120040">040-612 00 40</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-post</h4>
+                            <p><a href="mailto:info@danials.nu">info@danials.nu</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-motorcycle"></i>
+                        <div>
+                            <h4>Hemleverans</h4>
+                            <p>Snabb leverans inom Malmö</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <div>
+                            <h4>Avhämtning</h4>
+                            <p>Beställ och hämta när det passar dig</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <div class="order-content">
+                <h2 class="section-title">Beställ Online</h2>
+                <p class="section-subtitle">Snabb och enkel beställning för avhämtning eller hemleverans</p>
+                
+                <div class="order-options">
+                    <div class="order-option">
+                        <div class="option-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h3>Avhämtning</h3>
+                        <p>Beställ och hämta i restaurangen</p>
+                        <span class="discount-badge">10% rabatt</span>
+                    </div>
+                    
+                    <div class="order-option">
+                        <div class="option-icon">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+                        <h3>Hemleverans</h3>
+                        <p>Vi levererar direkt till din dörr</p>
+                        <span class="delivery-badge">Inom 45 min</span>
+                    </div>
+                </div>
+                
+                <div class="order-buttons">
+                    <a href="tel:+46406120040" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone"></i>
+                        Ring & Beställ
+                    </a>
+                    <button class="btn btn-secondary btn-lg" onclick="alert('Online beställning kommer snart! Ring oss på 040-612 00 40')">
+                        <i class="fas fa-laptop"></i>
+                        Beställ Online
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Location Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hitta till oss</h2>
+                <p class="section-subtitle">Besök oss i Malmö</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Adress</h3>
+                        <p>
+                            Danials Indian Kitchen & Pizza<br>
+                            Malmö<br>
+                            Sverige
+                        </p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Telefon</h3>
+                        <p><a href="tel:+46406120040">040-612 00 40</a></p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>E-post</h3>
+                        <p><a href="mailto:info@danials.nu">info@danials.nu</a></p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Följ oss</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Karta kommer här</p>
+                        <small>Integrera med Google Maps för att visa exakt plats</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Danials</h3>
+                    <p>Upplev äkta indiska smaker och traditionell pizza i hjärtat av Malmö.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Snabblänkar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Hem</a></li>
+                        <li><a href="#menu">Meny</a></li>
+                        <li><a href="#hours">Öppettider</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> 040-612 00 40</li>
+                        <li><i class="fas fa-envelope"></i> info@danials.nu</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Malmö, Sverige</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Öppettider</h4>
+                    <ul class="footer-links">
+                        <li>Mån-Tors: 11:00 - 22:00</li>
+                        <li>Fre-Lör: 11:00 - 23:00</li>
+                        <li>Söndag: 12:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Danials Indian Kitchen & Pizza Malmö. Alla rättigheter förbehållna.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
