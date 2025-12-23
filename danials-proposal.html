@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webbplats Modernisering - Danials Indian Kitchen & Pizza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #D97706;
+            --primary-dark: #B45309;
+            --secondary: #DC2626;
+            --accent: #10B981;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Cover */
+        .cover {
+            background: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .cover-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .cover-subtitle {
+            font-size: 1.5rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+        }
+
+        .cover-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--light-gray);
+        }
+
+        .meta-item {
+            text-align: left;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-value {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Section */
+        .section {
+            background: var(--white);
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Problem/Solution Boxes */
+        .box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            margin: 2rem 0;
+        }
+
+        .box-red {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left-color: var(--secondary);
+        }
+
+        .box-green {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left-color: var(--accent);
+        }
+
+        .box-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: var(--light-gray);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .features-list li i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--dark);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:hover {
+            background: #fafafa;
+        }
+
+        .check {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .cross {
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+
+        /* Pricing */
+        .pricing-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .pricing-amount {
+            font-size: 5rem;
+            font-weight: 900;
+            margin: 1rem 0;
+        }
+
+        .pricing-note {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+
+        .pricing-features {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 1.5rem;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border: 3px solid var(--white);
+            border-radius: 50%;
+        }
+
+        .timeline-day {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+            color: var(--white);
+            padding: 4rem 3rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .footer-contact a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .footer-contact a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cover-title {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 2rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-amount {
+                font-size: 3.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 1rem 0.5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .section {
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            .cta-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="logo">ATOMIC SYSTEM</div>
+            <div class="tagline">Digital Solutions & Web Development</div>
+        </div>
+    </div>
+
+    <!-- Cover Page -->
+    <div class="cover">
+        <div class="container">
+            <div class="cover-title">
+                Webbplats Modernisering<br>
+                <span style="color: var(--primary);">Danials Indian Kitchen & Pizza</span>
+            </div>
+            <div class="cover-subtitle">
+                En komplett digital transformation för ökad försäljning och modernare kundupplevelse
+            </div>
+
+            <div class="cover-meta">
+                <div class="meta-item">
+                    <div class="meta-label">Förberedd För</div>
+                    <div class="meta-value">Danials Restaurant</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Datum</div>
+                    <div class="meta-value">24 December 2025</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Investering</div>
+                    <div class="meta-value" style="color: var(--primary); font-size: 1.5rem;">20,000 kr</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Lansering</div>
+                    <div class="meta-value">Inom 7 dagar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2 class="section-title">Executive Summary</h2>
+            
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">
+                Danials erbjuder <strong>autentisk indisk mat och traditionell pizza av högsta kvalitet</strong>, 
+                men er nuvarande webbplats <strong>danials.nu</strong> reflekterar inte er excellens. 
+                Den kostar er <strong>dagligen förlorade kunder och beställningar</strong>.
+            </p>
+
+            <div class="box box-red">
+                <div class="box-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Problemet
+                </div>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 0.5rem 0;"><strong>❌ Föråldrad design</strong> - Ger intryck av mindre professionell verksamhet</li>
+                    <li style="margin: 0.5rem 0;"><strong>❌ Dålig mobilupplevelse</strong> - 60% av era besökare är på mobil</li>
+                    <li style="margin: 0.5rem 0;"><strong>❌ Ingen tydlig beställningsväg</strong> - Kunder vet inte hur de ska beställa</li>
+                    <li style="margin: 0.5rem 0;"><strong>❌ Ingen interaktiv meny</strong> - Svårt att hitta rätt rätt snabbt</li>
+                    <li style="margin: 0.5rem 0;"><strong>❌ Långsam laddning</strong> - Besökare lämnar innan sidan laddats</li>
+                </ul>
+            </div>
+
+            <div class="box box-green">
+                <div class="box-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Vår Lösning
+                </div>
+                <p style="font-size: 1.125rem;">
+                    <strong>En helt ny, modern webbplats</strong> som är <strong>redan färdig och redo att lanseras</strong>. 
+                    Detta är inte ett löfte - det är en färdig produkt som kan vara live på danials.nu inom 7 dagar.
+                </p>
+            </div>
+        </div>
+
+        <!-- The Impact -->
+        <div class="section">
+            <h2 class="section-title">Affärspåverkan</h2>
+            
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">
+                Baserat på branschstatistik och liknande restaurangprojekt förväntar vi följande resultat:
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Ökning i online-beställningar</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, var(--accent), #059669);">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Fler mobila beställningar</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, var(--secondary), #991B1B);">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Minskning i bounce rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2 mån</div>
+                    <div class="stat-label">ROI payback period</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-title">
+                    <i class="fas fa-calculator"></i>
+                    ROI Beräkning - Danials
+                </div>
+                <table style="width: 100%; margin-top: 1rem;">
+                    <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                        <td style="padding: 0.75rem 0; font-weight: 600;">Nuvarande online-beställningar/månad</td>
+                        <td style="padding: 0.75rem 0; text-align: right;">~100 st</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                        <td style="padding: 0.75rem 0; font-weight: 600;">Genomsnittlig ordervärde</td>
+                        <td style="padding: 0.75rem 0; text-align: right;">250 kr</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                        <td style="padding: 0.75rem 0; font-weight: 600;">Nuvarande månatlig online-försäljning</td>
+                        <td style="padding: 0.75rem 0; text-align: right; font-size: 1.125rem;">25,000 kr</td>
+                    </tr>
+                    <tr style="border-bottom: 2px solid rgba(0,0,0,0.2); background: rgba(16, 185, 129, 0.1);">
+                        <td style="padding: 0.75rem 0; font-weight: 700;">Förväntad ökning (40%)</td>
+                        <td style="padding: 0.75rem 0; text-align: right; font-weight: 700; color: var(--accent); font-size: 1.25rem;">+40 beställningar</td>
+                    </tr>
+                    <tr style="background: rgba(16, 185, 129, 0.2);">
+                        <td style="padding: 1rem 0; font-weight: 700; font-size: 1.125rem;">Extra intäkt per månad</td>
+                        <td style="padding: 1rem 0; text-align: right; font-weight: 900; color: var(--accent); font-size: 1.5rem;">10,000 kr</td>
+                    </tr>
+                    <tr style="background: rgba(16, 185, 129, 0.3);">
+                        <td style="padding: 1rem 0; font-weight: 700; font-size: 1.125rem;">Extra intäkt per år</td>
+                        <td style="padding: 1rem 0; text-align: right; font-weight: 900; color: var(--accent); font-size: 1.75rem;">120,000 kr</td>
+                    </tr>
+                </table>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(16, 185, 129, 0.4); border-radius: 8px; text-align: center;">
+                    <div style="font-size: 1.125rem; margin-bottom: 0.5rem;">Investering: 20,000 kr</div>
+                    <div style="font-size: 1.5rem; font-weight: 700;">Payback period: 2 månader</div>
+                    <div style="font-size: 1.125rem; margin-top: 0.5rem;">Årlig ROI: <strong>500%</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current vs New -->
+        <div class="section">
+            <h2 class="section-title">Nuvarande vs Nya Webbplatsen</h2>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Funktion</th>
+                        <th style="text-align: center;">Nuvarande (danials.nu)</th>
+                        <th style="text-align: center;">Nya Webbplatsen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mobilanpassning</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Dålig</td>
+                        <td style="text-align: center;"><span class="check">✓</span> Perfekt</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Modern Design</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Föråldrad</td>
+                        <td style="text-align: center;"><span class="check">✓</span> 2025 Standard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interaktiv Meny</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Statisk</td>
+                        <td style="text-align: center;"><span class="check">✓</span> Filter & Kategorier</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tydliga CTA-knappar</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Saknas/Otydlig</td>
+                        <td style="text-align: center;"><span class="check">✓</span> Strategiskt placerade</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laddningstid</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Långsam</td>
+                        <td style="text-align: center;"><span class="check">✓</span> < 2 sekunder</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SEO-Optimering</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Grundläggande</td>
+                        <td style="text-align: center;"><span class="check">✓</span> Avancerad</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Animationer & UX</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Ingen</td>
+                        <td style="text-align: center;"><span class="check">✓</span> Smooth & Modern</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Öppettider Synliga</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span> Dåligt presenterat</td>
+                        <td style="text-align: center;"><span class="check">✓</span> Tydlig sektion</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- What You Get -->
+        <div class="section">
+            <h2 class="section-title">Vad Ingår - Komplett Lösning</h2>
+
+            <div class="section-subtitle">
+                <i class="fas fa-globe"></i> 1. Fullständig Webbplats
+            </div>
+
+            <ul class="features-list">
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Hero-sektion</strong> - Imponerande välkomstsektion med stora CTA-knappar
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Om Oss</strong> - Berättar er historia med tre nyckelpoäng
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Interaktiv Meny</strong> - Filter mellan Indiska rätter, Pizza, Vegetariskt, Drycker
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Öppettider</strong> - Tydlig presentation av alla veckans öppettider
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Beställnings-sektion</strong> - Avhämtning (10% rabatt) & Hemleverans
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Kontakt</strong> - Telefon, email, adress, social media länkar
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Footer</strong> - Snabblänkar och all information lättillgänglig
+                    </div>
+                </li>
+            </ul>
+
+            <div class="section-subtitle" style="margin-top: 3rem;">
+                <i class="fas fa-mobile-alt"></i> 2. Tekniska Specifikationer
+            </div>
+
+            <ul class="features-list">
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>HTML5, CSS3, JavaScript</strong> - Modern, ren kod (5,353 rader)
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>100% Responsiv</strong> - Perfekt på mobil, tablet och desktop
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Snabb Laddning</strong> - Optimerad för prestanda
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>SEO-Optimerad</strong> - Semantisk HTML, meta-tags, bättre ranking
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Cross-Browser</strong> - Fungerar på Chrome, Firefox, Safari, Edge
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Smooth Animationer</strong> - Scroll-effekter, hover-states, transitions
+                    </div>
+                </li>
+            </ul>
+
+            <div class="section-subtitle" style="margin-top: 3rem;">
+                <i class="fas fa-tools"></i> 3. Lansering & Support
+            </div>
+
+            <ul class="features-list">
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Domän-konfiguration</strong> - Publicering på danials.nu
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Hosting Setup</strong> - 1 års webbhotell ingår
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>SSL-certifikat</strong> - HTTPS för säkerhet och bättre SEO
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Innehållsanpassning</strong> - Era texter, priser, bilder
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Google Maps</strong> - Integration för platsvisning
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Google Analytics</strong> - Spåra besökare och prestanda
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>30 Dagars Support</strong> - Buggfixar, justeringar, frågor
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Utbildning</strong> - Hur ni uppdaterar innehåll själva
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Timeline -->
+        <div class="section">
+            <h2 class="section-title">Projektplan & Tidslinje</h2>
+
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">
+                Vi kan ha er nya webbplats live inom <strong>7-10 arbetsdagar</strong>. 
+                Här är den exakta processen:
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-day">Dag 1: Projektstart</div>
+                    <div>
+                        • Kickoff-möte (30 minuter)<br>
+                        • Samla in material (bilder, texter, priser)<br>
+                        • Domän- och hosting-access
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">Dag 2-3: Innehållsanpassning</div>
+                    <div>
+                        • Lägg in era matbilder<br>
+                        • Uppdatera meny med aktuella priser<br>
+                        • Anpassa texter till Danials<br>
+                        • Lägg in kontaktinformation
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">Dag 4-5: Integration & Testing</div>
+                    <div>
+                        • Google Maps integration<br>
+                        • Google Analytics setup<br>
+                        • Test på alla enheter (mobil, tablet, desktop)<br>
+                        • Cross-browser testing
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">Dag 6: Er Granskning</div>
+                    <div>
+                        • Vi visar er preview<br>
+                        • Ni ger feedback<br>
+                        • Vi gör eventuella justeringar
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">Dag 7: Lansering</div>
+                    <div>
+                        • Final godkännande<br>
+                        • Publicering på danials.nu<br>
+                        • Live i produktion!<br>
+                        • Utbildning & överlämning
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">
+                    <div class="timeline-day">Dag 8-37: Support</div>
+                    <div>
+                        • 30 dagars gratis support<br>
+                        • Buggfixar & justeringar<br>
+                        • Tekniska frågor<br>
+                        • Email & telefon support
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="section">
+            <h2 class="section-title">Investering & Betalning</h2>
+
+            <div class="pricing-box">
+                <div style="font-size: 1.25rem; margin-bottom: 1rem; opacity: 0.9;">
+                    Komplett Paket - Allt Ingår
+                </div>
+                <div class="pricing-amount">20,000 kr</div>
+                <div class="pricing-note">
+                    Engångsbetalning • Inga dolda kostnader • 1 år hosting ingår
+                </div>
+
+                <div class="pricing-features">
+                    <div style="font-weight: 700; margin-bottom: 1rem; font-size: 1.125rem;">
+                        ✓ Detta Ingår:
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div>
+                            ✓ Komplett webbplats<br>
+                            ✓ 7 sektioner<br>
+                            ✓ Interaktiv meny<br>
+                            ✓ Responsiv design
+                        </div>
+                        <div>
+                            ✓ Domän-konfiguration<br>
+                            ✓ 1 år hosting<br>
+                            ✓ SSL-certifikat<br>
+                            ✓ Google Maps
+                        </div>
+                        <div>
+                            ✓ Google Analytics<br>
+                            ✓ Innehållsanpassning<br>
+                            ✓ 30 dagars support<br>
+                            ✓ Utbildning
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe); border-left-color: #6366f1;">
+                <div class="box-title" style="color: #6366f1;">
+                    <i class="fas fa-credit-card"></i>
+                    Flexibla Betalningsalternativ
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+                    <div>
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">Alternativ 1: Delbetalning</div>
+                        <div>50% (10,000 kr) vid projektstart</div>
+                        <div>50% (10,000 kr) vid lansering</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">Alternativ 2: Full betalning</div>
+                        <div>100% (20,000 kr) vid projektstart</div>
+                        <div style="color: var(--accent); font-weight: 600;">+ 5% rabatt (spara 1,000 kr)</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.1);">
+                    <strong>Betalningsmetoder:</strong> Bankgiro, Swish, Faktura (företag)
+                </div>
+            </div>
+
+            <div class="box box-green">
+                <div class="box-title">
+                    <i class="fas fa-gift"></i>
+                    Bonus: Framtida Funktioner
+                </div>
+                <p style="margin-top: 1rem;">
+                    När ni är redo att ta nästa steg kan vi lägga till:
+                </p>
+                <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                    <li><strong>Online Beställningssystem</strong> - Kundvagn, betalning (Swish/Klarna), orderhantering (45,000-65,000 kr)</li>
+                    <li><strong>Månadsvis Underhåll</strong> - Uppdateringar, support, innehållsändringar (2,500 kr/månad)</li>
+                    <li><strong>Marketing</strong> - Google Ads, SEO, Social Media (från 5,000 kr/månad)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Why Atomic System -->
+        <div class="section">
+            <h2 class="section-title">Varför Välja Atomic System?</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Snabb Leverans</h3>
+                    <p style="color: var(--gray);">
+                        Webbplatsen är redan färdig. Live inom 7 dagar, inte månader.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Bevisad Lösning</h3>
+                    <p style="color: var(--gray);">
+                        Detta är inte ett experiment. Designen är testad och optimerad för konvertering.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Transparent Prissättning</h3>
+                    <p style="color: var(--gray);">
+                        20,000 kr allt-inräknat. Inga dolda kostnader eller överraskningar.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">30 Dagars Support</h3>
+                    <p style="color: var(--gray);">
+                        Vi är här för er även efter lansering. Ingen lämnas ensam.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Professionell Kvalitet</h3>
+                    <p style="color: var(--gray);">
+                        Kod av högsta standard. Modern design. Bästa UX-praxis.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Mätbara Resultat</h3>
+                    <p style="color: var(--gray);">
+                        Google Analytics ingår. Se er tillväxt i realtid.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section">
+            <h2 class="section-title">Vanliga Frågor</h2>
+
+            <div style="display: grid; gap: 1.5rem;">
+                <div class="box" style="background: white; border: 2px solid var(--light-gray);">
+                    <div style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1.125rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary);"></i>
+                        Kan vi själva uppdatera menyn och priserna?
+                    </div>
+                    <div style="color: var(--gray);">
+                        Ja! Vi utbildar er i hur ni enkelt kan uppdatera texter, priser och menyobjekt. För mer komplexa ändringar kan ni använda vårt underhållsavtal.
+                    </div>
+                </div>
+
+                <div class="box" style="background: white; border: 2px solid var(--light-gray);">
+                    <div style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1.125rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary);"></i>
+                        Vad händer efter 1 år när hosting löper ut?
+                    </div>
+                    <div style="color: var(--gray);">
+                        Hosting kostar ca 500-1,000 kr/år. Vi påminner er i god tid och kan förnya åt er, eller så väljer ni egen leverantör.
+                    </div>
+                </div>
+
+                <div class="box" style="background: white; border: 2px solid var(--light-gray);">
+                    <div style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1.125rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary);"></i>
+                        Kan vi lägga till online-beställning senare?
+                    </div>
+                    <div style="color: var(--gray);">
+                        Absolut! Vi har ett komplett online-beställningssystem som kan integreras senare (kundvagn, betalning, orderhantering). Detta kostar 45,000-65,000 kr.
+                    </div>
+                </div>
+
+                <div class="box" style="background: white; border: 2px solid var(--light-gray);">
+                    <div style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1.125rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary);"></i>
+                        Äger vi webbplatsen?
+                    </div>
+                    <div style="color: var(--gray);">
+                        Ja, 100%! Vid full betalning övergår all äganderätt till er. All kod, design och filer är era.
+                    </div>
+                </div>
+
+                <div class="box" style="background: white; border: 2px solid var(--light-gray);">
+                    <div style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1.125rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary);"></i>
+                        Vad behöver vi tillhandahålla?
+                    </div>
+                    <div style="color: var(--gray);">
+                        Matbilder (10-20 st), aktuella priser och meny, kontaktinformation, och ca 2-3 timmar av er tid för möten och feedback. Vi sköter resten!
+                    </div>
+                </div>
+
+                <div class="box" style="background: white; border: 2px solid var(--light-gray);">
+                    <div style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1.125rem;">
+                        <i class="fas fa-question-circle" style="color: var(--primary);"></i>
+                        Kan vi se webbplatsen innan vi bestämmer oss?
+                    </div>
+                    <div style="color: var(--gray);">
+                        Ja! Vi kan visa er en live demo av den färdiga webbplatsen. Kontakta oss för att boka ett 15-minuters demo-möte.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2 class="cta-title">
+                Redo att Modernisera Danials?
+            </h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Låt oss hjälpa er att få fler kunder, öka försäljningen, och representera er verksamhet 
+                med en webbplats ni kan vara stolta över.
+            </p>
+
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 12px; max-width: 600px; margin: 2rem auto;">
+                <div style="font-size: 1.125rem; margin-bottom: 1rem;">
+                    📅 <strong>Nästa Steg:</strong>
+                </div>
+                <div style="text-align: left; line-height: 2;">
+                    1. Se live demo av webbplatsen<br>
+                    2. Diskutera era specifika behov<br>
+                    3. Besluta om timing och start<br>
+                    4. Lansera inom 7 dagar!
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="tel:+46XXXXXXXXX" class="btn btn-primary btn-lg" style="font-size: 1.25rem; padding: 1.25rem 2.5rem;">
+                    <i class="fas fa-phone"></i>
+                    Ring för Demo
+                </a>
+                <a href="mailto:hello@atomicsystem.se" class="btn btn-secondary btn-lg" style="font-size: 1.25rem; padding: 1.25rem 2.5rem;">
+                    <i class="fas fa-envelope"></i>
+                    Skicka Email
+                </a>
+            </div>
+
+            <div style="margin-top: 3rem; opacity: 0.9;">
+                <div style="font-size: 1.125rem; margin-bottom: 1rem;">
+                    ⭐ Specialerbjudande för Danials:
+                </div>
+                <div style="font-size: 1rem;">
+                    <strong>Boka demo inom 7 dagar</strong> och få 5% rabatt vid full betalning<br>
+                    (Spara ytterligare 1,000 kr - Totalt 19,000 kr istället för 20,000 kr)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-logo">ATOMIC SYSTEM</div>
+            <div style="opacity: 0.8; margin-bottom: 2rem;">
+                Din Partner för Digital Tillväxt
+            </div>
+
+            <div class="footer-contact">
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+46XXXXXXXXX">+46 XXX XXX XXX</a>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:hello@atomicsystem.se">hello@atomicsystem.se</a>
+                </div>
+                <div>
+                    <i class="fas fa-globe"></i>
+                    <a href="https://atomicsystem.se">www.atomicsystem.se</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.6;">
+                © 2025 Atomic System. Alla rättigheter förbehållna.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections
+        document.querySelectorAll('.section, .box').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Print-friendly
+        window.addEventListener('beforeprint', () => {
+            document.querySelectorAll('.section, .box').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+
